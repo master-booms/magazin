@@ -1,0 +1,72 @@
+.sidebar
+	.categories
+		ul.categories__list
+			-var items = ['Флагманы', 'Бюджетная линейка']
+			each item in items
+				li(class='categories__item' + ((item == 'Бюджетная линейка') ? ' ' + 'active' : ''))
+					a(href='#').categories__link= item
+	.accordeon
+		ul.accordeon__list
+			li.accordeon__item
+				.accordeon__title
+					a(href='#').accordeon__title-trigger Наличие в магазинах
+				.accordeon__content
+					ul.accordeon__choose
+						-var items = ['Во всех магазинах', 'В ближайшем ко мне магазине']
+						each item in items 
+							li.accordeon__choose-item
+								label.accordeon__choose-label
+									input(name='location' type='radio').accordeon__choose-input
+									.accordeon__choose-elem
+									.accordeon__choose-text= item
+									
+			li.accordeon__item
+				.accordeon__title
+					a(href='#').accordeon__title-trigger Бренды
+				.accordeon__content
+					ul.accordeon__choose.accordeon__choose_checkbox
+						-var items = ['Lenovo','Apple','Samsung','Asus', 'Motorola']
+						each item in items
+							li.accordeon__choose-item
+								label.accordeon__choose-label
+									input(name='location' type='checkbox').accordeon__choose-input
+									.accordeon__choose-elem
+									.accordeon__choose-text= item
+					.accordeon__reset-wrap
+						a(href='#').accordeon__reset Сбросить фильтр
+			li.accordeon__item
+				.accordeon__title
+					a(href='#').accordeon__title-trigger Цена
+				.accordeon__content
+					.accordeon__slider
+						.accordeon__slider-displays
+							.accordeon__slider-left
+								.accordeon__slider-text от 
+								input(name='' type='text' placeholder='').accordeon__slider-input.accordeon__slider-input_from
+							.accordeon__slider-right
+								.accordeon__slider-text до
+								input(name='' type='text' placeholder='').accordeon__slider-input.accordeon__slider-input_to
+						div(class='accordeon__slider-element' data-min='0' data-max='30000')
+			li.accordeon__item
+				.accordeon__title
+					a(href='#').accordeon__title-trigger Цвет
+				.accordeon__content
+					ul.accordeon__colors
+						-var colors = ['ffffff','cccccc','000000','0a3153','ff1800','fff343','fb914a','92c37c','40a6ff','9870ad','dc78ad','7f401d']
+						each color in colors
+							li.accordeon__colors-item
+								a(href='#' style='background-color: #' + color).accordeon__colors-link
+			li.accordeon__item
+				.accordeon__title
+					a(href='#').accordeon__title-trigger Операционная система
+				.accordeon__content
+					ul.accordeon__choose.accordeon__choose_checkbox
+						-var items = ['Android','iOs','Symbian','Windows Mobile','Custom']
+						each item in items
+							li.accordeon__choose-item
+								label.accordeon__choose-label
+									input(name='location' type='checkbox').accordeon__choose-input
+									.accordeon__choose-elem
+									.accordeon__choose-text= item
+					.accordeon__reset--wrap
+						a(href='#').accordeon__reset Сбросить фильтр

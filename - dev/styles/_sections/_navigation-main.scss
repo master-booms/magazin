@@ -1,0 +1,50 @@
+
+
+
+.navigation-main {
+	background: #fff;
+	border-bottom:2px solid #ebedef;
+	margin-bottom: 26px;
+}
+
+.navigation-main__list {
+
+	font-size: 0;
+
+	&:after {
+		content:'';
+		height: 0;
+		width: 100%;
+		@include inlineblock();
+		visibility: hidden;
+	}
+}
+
+.navigation-main__item {
+	@include inlineblock();
+}
+
+.navigation-main__link {
+	font-size: 16px;
+	line-height: 18px;
+	padding: 17px 16px;
+	@include inlineblock();
+	color:$black;
+	text-decoration: none;
+	@include open-sans($style:regular);
+
+	&:hover {
+		background: #e4e2e2;
+	}
+
+	
+}
+
+.navigation-main__link_active{
+	background: $orange;
+	color: #fff;
+
+	&:hover {
+		background: $orange;
+	}
+}
