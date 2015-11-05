@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "template for works",
   "main": "gulpfile.js",
-  "repository": "https://github.com/master-booms/im.git",
+  "repository": "https://github.com/master-booms/magazin",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
