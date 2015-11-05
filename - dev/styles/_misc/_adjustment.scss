@@ -1,7 +1,7 @@
 /* --------- adjustment --------- */
 
 $container-width: 1105px;
-$footer-height: 222px;
+$footer-height: 220px;
 $body-font: 'Open Sans', sans-serif;
 
 html {
@@ -70,6 +70,3 @@ footer {
 	height: $footer-height;
 }
 
-.maincontent {
-	margin-bottom: 29px;
-}

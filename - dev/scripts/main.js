@@ -179,6 +179,9 @@ $(document).ready(function() {
 	});
 /*----------------------Checkbox Reset End--------------*/
 
+/*----------------------Columnizer--------------*/
+
+$('.columniz__text').columnize({width: 500});
 
 });
 /*----------------------End--------------*/

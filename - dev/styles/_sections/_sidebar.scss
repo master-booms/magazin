@@ -58,6 +58,15 @@
 	&:first-child {
 		border-top: none;
 	}
+
+	&.active {
+		.accordeon__title-trigger{
+			&:after{
+				@include get-sprite($select-map, select-open);
+				opacity:1;
+			}
+		}
+	}
 }
 .accordeon__choose-item {
 	margin-top: 16px;
@@ -68,15 +77,32 @@
 }
 .accordeon__title {
 	margin:0;
+	
+
+
 }
 
 .accordeon__title-trigger {
 	color: $black;
 	font-size: 16px;
-	line-height: 18px;
+	
 	@include open-sans(semibold);
-	margin-bottom: 18px;
+	
 	text-decoration: none;
+	position: relative;
+	display: block;
+
+	&:after{
+		content:'';
+		@include get-sprite($select-map, select-close);
+		position: absolute;
+		top:10px;
+		right: 0px;
+		opacity:0;
+		
+
+	}
+
 
 }
 

@@ -485,7 +485,7 @@ body {
   .wrapper:after {
     display: block;
     position: relative;
-    height: 222px; }
+    height: 220px; }
 
 table {
   border-collapse: collapse;
@@ -506,10 +506,7 @@ p {
 footer {
   position: relative;
   min-width: 1135px;
-  height: 222px; }
-
-.maincontent {
-  margin-bottom: 29px; }
+  height: 220px; }
 
 /*----------misc icons sprite-----*/
 /*----------Fonts-----*/
@@ -2556,12 +2553,6 @@ body .ui-tooltip {
     cursor: pointer; }
 
 /* --------- sections --------- */
-.attension__text p {
-  font-size: 14px;
-  line-height: 28px;
-  color: #333333;
-  margin-bottom: 20px; }
-
 .breadcrumbs__item {
   display: inline-block;
   vertical-align: middle;
@@ -2586,6 +2577,26 @@ body .ui-tooltip {
   display: inline-block;
   vertical-align: middle;
   text-decoration: none; }
+
+.columniz__text {
+  margin-bottom: 30px; }
+  .columniz__text p {
+    font-size: 14px;
+    font-family: 'Open Sans','sans-serif';
+    font-weight: 400;
+    line-height: 28px;
+    color: #333333;
+    margin-bottom: 25px;
+    text-indent: 30px; }
+
+.column.first {
+  float: left !important;
+  text-align: justify;
+  width: 525px !important; }
+.column.last {
+  float: right !important;
+  width: 525px !important;
+  text-align: justify; }
 
 .main-title {
   font-size: 20px;
@@ -2868,6 +2879,9 @@ body .ui-tooltip {
   padding: 8px 15px;
   width: 259px;
   margin-right: -7px; }
+  .search__form-input:focus, .accordeon__slider-input:focus {
+    outline: none;
+    border: 1px solid #ff6e35; }
 
 .search__form-submit {
   width: 78px;
@@ -2884,6 +2898,9 @@ body .ui-tooltip {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   border: 1px solid #ff6e35; }
+  .search__form-submit:focus {
+    outline: none;
+    border: 1px solid #ff6e35; }
 
 .navigation-main {
   background: #fff;
@@ -3427,6 +3444,11 @@ body .ui-tooltip {
   border-top: 1px solid #dee1e4; }
   .accordeon__item:first-child {
     border-top: none; }
+  .accordeon__item.active .accordeon__title-trigger:after {
+    background: url('../img/icons/select-s755bf4a4a5.png') 0 -79px no-repeat;
+    height: 9px;
+    width: 13px;
+    opacity: 1; }
 
 .accordeon__choose-item {
   margin-top: 16px; }
@@ -3439,11 +3461,20 @@ body .ui-tooltip {
 .accordeon__title-trigger {
   color: #333333;
   font-size: 16px;
-  line-height: 18px;
   font-family: 'Open Sans','sans-serif';
   font-weight: 600;
-  margin-bottom: 18px;
-  text-decoration: none; }
+  text-decoration: none;
+  position: relative;
+  display: block; }
+  .accordeon__title-trigger:after {
+    content: '';
+    background: url('../img/icons/select-s755bf4a4a5.png') 0 0 no-repeat;
+    height: 9px;
+    width: 13px;
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    opacity: 0; }
 
 .accordeon__choose {
   margin-bottom: 13px; }

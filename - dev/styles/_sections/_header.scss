@@ -164,6 +164,11 @@ $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
 	padding: 8px 15px;
 	width: 259px;
 	margin-right: -7px;
+
+	&:focus{
+		outline:none;
+		border:1px solid $orange;
+	}
 }
 
 .search__form-submit {
@@ -175,4 +180,9 @@ $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
 	border: none;
 	@include border-radius(0 5px 5px 0);
 	border:1px solid $orange;
+
+	&:focus{
+		outline:none;
+		border:1px solid $orange;
+	}
 }

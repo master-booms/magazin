@@ -1,0 +1,29 @@
+.columniz__text {
+
+	margin-bottom: 30px;
+	p {
+		font-size: 14px;
+		@include open-sans(regular);
+		line-height: 28px;
+		color:$black;
+		margin-bottom: 25px;
+		text-indent: 30px;
+	}
+}
+
+.column {
+	&.first{
+		float: left !important;
+		text-align:justify;
+		width:525px !important;
+		
+	}
+	
+	&.last{
+		float: right !important;
+		width:525px !important;
+		text-align:justify;
+		
+	}
+
+}
