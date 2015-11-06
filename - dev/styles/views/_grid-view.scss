@@ -4,16 +4,28 @@
 	@include border-radius(0px);
 	margin-left: -11px;
 	background: transparent;
+	padding-top:2px;
 
 	.products__item {
 		@include inlineblock();
 		width: 235px;
-		border-top:0;
 		text-align: center;
 		@include border-radius(5px);
 		border: 1px solid $grey;
 		margin-left: 11px;
 		margin-bottom: 11px;
+		box-sizing:border-box;
+
+		&:first-child {
+				border: 1px solid $grey;
+	
+		}
+		
+			&:hover {
+				box-shadow: 0 1px 5.7px 0.3px rgba(118, 118, 118, 0.75);
+
+			}
+		
 }
 	
 

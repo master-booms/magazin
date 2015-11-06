@@ -4,30 +4,32 @@
 
 
 .products__list {
-	border: 1px solid $grey;
-	@include border-radius(7px);
-	overflow: hidden;
+		// overflow: hidden;
 	background: #fff;
+	@include border-radius(7px);
 
 }
 
 .products__item {
-	border-top: 1px solid $grey;
+	border: 1px solid $grey;
+	border-bottom:none;
+	
 
-	&:first-child {
-		border-top: none;
-		&:hover {
-		box-shadow: 0 1px 5.7px 0.3px rgba(118, 118, 118, 0.75);
-		border-top: 1px solid $grey;
+
+	&:first-child{
+		@include border-radius(7px 7px 0 0);
 		
-		z-index: 2;
 	}
+
+	&:last-child {
+		@include border-radius(0 0 7px 7px);
+		border-bottom:1px solid $grey;
 	}
 
 	&:hover {
 		box-shadow: 0 1px 5.7px 0.3px rgba(118, 118, 118, 0.75);
-		border-top: 1px solid $grey;
-		z-index: 2;
+		
+		@include transition(.4s);
 	}
 }
 
@@ -94,6 +96,7 @@
 	margin-bottom: 0;
 	position: relative;
 	outline: none;
+	@include transition(1s);
 
 	&:hover {
 		border-color: $orange;

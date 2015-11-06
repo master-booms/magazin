@@ -69,6 +69,7 @@ $dark-socials-map:sprite-map('icons/dark-socials/*.png', $spacing:70px);
 					&:after {
 					$icon-name: $item + '-hover';
 					@include get-sprite($dark-socials-map, $icon-name);
+					@include transition(linear 0.8s);
 					}
 
 				}
@@ -89,9 +90,12 @@ $dark-socials-map:sprite-map('icons/dark-socials/*.png', $spacing:70px);
 	font-size: 14px;
 	line-height: 16px;
 	color:#fff;
+	@include transition(2s);
 
 	&:hover {
 		text-decoration: none;
+		color: $orange;
+		
 	}
 }
 

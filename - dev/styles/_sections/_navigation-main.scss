@@ -32,9 +32,11 @@
 	color:$black;
 	text-decoration: none;
 	@include open-sans($style:regular);
+	@include transition(2s);
 
 	&:hover {
 		background: #e4e2e2;
+		
 	}
 
 	

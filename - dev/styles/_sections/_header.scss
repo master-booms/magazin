@@ -31,6 +31,7 @@
 	background: #333333;
 	position: relative;
 
+
 }
 
 .socials__icon {
@@ -46,8 +47,6 @@ $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
 
 @each $social in $socials {
 	.socials__item_#{$social} {
-
-
 		.socials__icon {
 			@include get-sprite($socials-map, $social);
 			&:hover {
@@ -143,9 +142,11 @@ $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
 	line-height: 18px;
 	color:$black;
 	@include open-sans($style:semibold);
+	@include transition(1s);
 
 	&:hover{
 		color: $orange;
+		
 	}
 }
 
@@ -164,12 +165,18 @@ $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
 	padding: 8px 15px;
 	width: 259px;
 	margin-right: -7px;
+	@include transition(1s);
+	@include placecolor(#909090);
 
 	&:focus{
 		outline:none;
 		border:1px solid $orange;
+		@include placecolor($orange);
+		color: $orange;
+
 	}
 }
+
 
 .search__form-submit {
 	width: 78px;
@@ -183,6 +190,6 @@ $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
 
 	&:focus{
 		outline:none;
-		border:1px solid $orange;
 	}
+
 }

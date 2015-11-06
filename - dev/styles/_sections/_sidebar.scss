@@ -20,13 +20,19 @@
 
 .categories__item {
 	border-top: 1px solid #dee1e4;
+	transition:2s;
 
 	&:first-child {
 		border-top: none;
 	}
 
-	&:active {
+	&.active {
 		background: #d9e5ea;
+	}
+
+	&:hover {
+		background: #d9e5ea;
+		
 	}
 }
 
@@ -37,6 +43,7 @@
 	color: #7f7f7f;
 	text-decoration: none;
 	box-sizing: border-box;
+
 }
 
 /*--------------------Filter ------------------*/
@@ -59,11 +66,20 @@
 		border-top: none;
 	}
 
+	&:hover{
+		background: #d9e5ea;
+		@include transition(0.8s);
+}
 	&.active {
+		
+			background: #fbfbfb;
+
+
 		.accordeon__title-trigger{
 			&:after{
-				@include get-sprite($select-map, select-open);
-				opacity:1;
+				$arrow-sidebar-map: sprite-map('icons/arrow-sidebar/*.png', $spacing: 70px);
+				@include get-sprite($arrow-sidebar-map, arr_open);
+				
 			}
 		}
 	}
@@ -82,6 +98,7 @@
 
 }
 
+
 .accordeon__title-trigger {
 	color: $black;
 	font-size: 16px;
@@ -92,17 +109,23 @@
 	position: relative;
 	display: block;
 
+	&:hover:after{
+		display: block;
+		@include transition(0.5s);
+	}
+
 	&:after{
 		content:'';
-		@include get-sprite($select-map, select-close);
+		$arrow-sidebar-map: sprite-map('icons/arrow-sidebar/*.png', $spacing: 70px);
+		@include get-sprite($arrow-sidebar-map, arr_close);
 		position: absolute;
 		top:10px;
 		right: 0px;
-		opacity:0;
+		display: none;
 		
-
+		
 	}
-
+	
 
 }
 
